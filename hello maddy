@@ -1,0 +1,20 @@
+<?php
+/**
+ * @package Hello_Maddy
+ * @version 1.0
+ */
+/*
+Plugin Name: Hello Maddy
+Plugin URI: 
+Description: Its my first plugin
+Version: 1.0
+Author URI: http://bit.ly/123nSlj
+*/
+
+function my_function ($text) {
+  $text = str_replace('Welcome', 'Hello Madhukar', $text);
+	return $text;
+}
+
+add_filter('the_content', 'my_function');
+?>
